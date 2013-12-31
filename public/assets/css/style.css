@@ -1,0 +1,15 @@
+.client fieldset legend { font-size: 100%; margin-bottom: 10px;  }
+
+
+div.alert {
+    -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+#alert_box div.alert {
+    margin-bottom: 0px;
+}
+#alert_box div.alert.last {
+    margin-bottom: 20px;
+}
