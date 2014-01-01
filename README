@@ -4,7 +4,8 @@ http://7daystodie.com/
 
 INSTALLATION:
 Install via git `git clone --recursive https://github.com/sebwert/zombmin.git zombmin` 
-to include all submodules. Tell your webserver that public directory
+to include all submodules. Run 'php composer.phar update' in zombmin base folder,
+where composer.phar is located.  Tell your webserver that public directory
 inside zombmin is the webroot. Point your browser to index.php/config/index
 and setup zombmin.
 
