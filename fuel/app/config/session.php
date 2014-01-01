@@ -83,19 +83,19 @@ return array(
 
 	// special configuration settings for cookie based sessions
 	'cookie'			=> array(
-		'cookie_name'		=> 'php7adminid',				// name of the session cookie for cookie based sessions
+		'cookie_name'		=> 'zombminid',				// name of the session cookie for cookie based sessions
 						),
 
 	// specific configuration settings for file based sessions
 	'file'				=> array(
-		'cookie_name'		=> 'php7adminid',				// name of the session cookie for file based sessions
+		'cookie_name'		=> 'zombminid',				// name of the session cookie for file based sessions
 		'path'				=>	'/tmp',					// path where the session files should be stored
 		'gc_probability'	=>	5						// probability % (between 0 and 100) for garbage collection
 						),
 
 	// specific configuration settings for memcached based sessions
 	'memcached'			=> array(
-		'cookie_name'		=> 'php7adminmid',				// name of the session cookie for memcached based sessions
+		'cookie_name'		=> 'zombminmid',				// name of the session cookie for memcached based sessions
 		'servers'			=> array(					// array of servers and portnumbers that run the memcached service
 								'default' => array('host' => '127.0.0.1', 'port' => 11211, 'weight' => 100)
 							),

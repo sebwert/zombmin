@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>php7admin - <?= \Php7admin\Page::getTitleStrippedTags() ?></title>
-        <?= \Php7admin\Page::getHeadElements() ?>
+        <title>Zombmin - <?= \Zombmin\Page::getTitleStrippedTags() ?></title>
+        <?= \Zombmin\Page::getHeadElements() ?>
     </head>
     <body>
         <nav class="navbar navbar-default" role="navigation">
             <div class="container">
-                <?= \Php7admin\Navigation::getNavigation(); ?>
+                <?= \Zombmin\Navigation::getNavigation(); ?>
             </div>
         </nav>
 
         <div class="container">
             <div class="page-header">
                 <h1 class="muted" >
-                    <small>php7admin - </small><?= \Php7admin\
+                    <small>Zombmin - </small><?= \Zombmin\
                                                         Page::getTitle() ?>
                 </h1>
             </div>
         </div>
 
         <div id="alert_box">
-        <? $error = \Php7admin\Messages::get('error'); ?>
-        <? $success = \Php7admin\Messages::get('success'); ?>
-        <? $info = \Php7admin\Messages::get('info'); ?>
+        <? $error = \Zombmin\Messages::get('error'); ?>
+        <? $success = \Zombmin\Messages::get('success'); ?>
+        <? $info = \Zombmin\Messages::get('info'); ?>
         <? if($error): ?>
             <? if(!$success && !$info): ?>
             <div class="alert alert-danger last">
@@ -66,6 +66,6 @@
         <div class="container">
             <?= $content ?>
         </div>
-        <?= \Php7admin\Page::getBottomScripts() ?>
+        <?= \Zombmin\Page::getBottomScripts() ?>
     </body>
 </html>

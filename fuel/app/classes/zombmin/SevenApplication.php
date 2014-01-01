@@ -35,7 +35,7 @@ class SevenApplication {
         $db_pw = $config->getConfigVal('/config/database/pw');
         try {
             DBManager::getInstance()->setConnection(
-                'php7admin',
+                'zombmin',
                 'mysql:host=' . $db_host . ';dbname=' . $db_name,
                 $db_user,
                 $db_pw

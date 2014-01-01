@@ -16,11 +16,11 @@ Autoloader::add_classes(array(
 // Register the autoloader
 Autoloader::register();
 Autoloader::add_classes(array(
-    'Config' => APPPATH.'classes/php7admin/override/'.'config.php'
+    'Config' => APPPATH.'classes/zombmin/override/'.'config.php'
 ));
 
 \Fuel\Core\Session::_init();
-\Php7admin\Page::initialize();
+\Zombmin\Page::initialize();
 
 /**
  * Your environment.  Can be set to any of the following:
@@ -35,5 +35,5 @@ Fuel::$env = (isset($_SERVER['FUEL_ENV']) ? $_SERVER['FUEL_ENV'] : Fuel::DEVELOP
 // Initialize the framework with the config file.
 Fuel::init('config.php');
 
-\Php7admin\Navigation::addNavigationLink('Server', Uri::base(false));
-\Php7admin\Navigation::addNavigationLink('Settings', Uri::create('config/index'));
+\Zombmin\Navigation::addNavigationLink('Server', Uri::base(false));
+\Zombmin\Navigation::addNavigationLink('Settings', Uri::create('config/index'));

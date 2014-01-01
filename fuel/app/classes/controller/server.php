@@ -23,8 +23,8 @@ class Controller_Server extends Controller
 
         $data = array();
 
-        $server = new \Php7admin\Server();
-        \Php7admin\Page::setTitel($server->get('gameName'));
+        $server = new \Zombmin\Server();
+        \Zombmin\Page::setTitel($server->get('gameName'));
         foreach($stats as $stat) {
             $data[$stat] = $server->get($stat);
         }

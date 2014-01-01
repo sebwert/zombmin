@@ -6,12 +6,12 @@ class Controller_Config extends Controller
 
     public function before()
     {
-        Php7admin\Navigation::setActive('Settings');
+        \Zombmin\Navigation::setActive('Settings');
         parent::before();
     }
     public function action_database()
 	{
-        \Php7admin\Page::setTitel('Settings<small> - Database</small>');
+        \Zombmin\Page::setTitel('Settings<small> - Database</small>');
 
         Config::loadUserConfig();
         $data = array(
@@ -32,7 +32,7 @@ class Controller_Config extends Controller
                 . "\n" .  Request::forge('config/database', false)
                                                         ->execute(), false);
 
-        \Php7admin\Page::setTitel('Settings');
+        \Zombmin\Page::setTitel('Settings');
 	}
 
 	public function action_save()
@@ -56,14 +56,14 @@ class Controller_Config extends Controller
                                 Input::post('telnet_port'));
         Config::saveUserConfig();
 
-        php7admin\Messages::add('Saved successfull!');
+        \Zombmin\Messages::add('Saved successfull!');
         
         Response::redirect(Uri::create('config'));
     }
 
 	public function action_telnet()
 	{
-        \Php7admin\Page::setTitel('Settings<small> - Telnet</small>');
+        \Zombmin\Page::setTitel('Settings<small> - Telnet</small>');
 
         Config::loadUserConfig();
         $data = array(

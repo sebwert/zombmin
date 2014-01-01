@@ -1,6 +1,6 @@
 <?php
 
-namespace Php7admin;
+namespace Zombmin;
 
 class Server 
 {
@@ -57,7 +57,7 @@ class Server
         $ip = \Config::getTelnetIP();
         $port = \Config::getTelnetPort();
 
-        $this->telnet = new \Php7admin\Telnet($ip, $port, 5, 'to end session.');
+        $this->telnet = new \Zombmin\Telnet($ip, $port, 5, 'to end session.');
         $this->parseStats($this->telnet->getGlobalBuffer());
     }
     /**

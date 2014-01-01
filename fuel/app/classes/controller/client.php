@@ -28,7 +28,7 @@ class Controller_Client extends Controller
         );
 
 
-        $server = new \Php7admin\Server();
+        $server = new \Zombmin\Server();
 
         $this->template->all_player = $server->getConnectedPlayer();
 

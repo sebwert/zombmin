@@ -1,5 +1,5 @@
 <?php
-namespace Php7admin;
+namespace Zombmin;
 
 class Messages
 {

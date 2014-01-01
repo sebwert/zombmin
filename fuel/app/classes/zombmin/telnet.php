@@ -16,7 +16,7 @@
  *
  */
 
-namespace Php7admin;
+namespace Zombmin;
 
 use \Exception as Exception;
 
