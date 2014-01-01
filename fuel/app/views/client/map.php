@@ -13,7 +13,7 @@
             </div>
             <div class="modal-body">
                 <div style="position: relative;">
-                    <img src="<?= \Config::get()->getImagePath() ?>/map_nav.jpg" class="img-rounded"
+                    <img src="<?= \Config::getImagePath() ?>/map_nav.jpg" class="img-rounded"
                          width="816" height="810"
                          id="map_image">
                     <span class="glyphicon glyphicon-screenshot"

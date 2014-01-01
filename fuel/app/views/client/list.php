@@ -26,7 +26,7 @@
                                   text-success">
 
                             </span>
-                        <b>
+                        </b>
                 </button>
                 <span class="glyphicon glyphicon-plus"></span>
                 <b><?= $player['health'] ?></b>
