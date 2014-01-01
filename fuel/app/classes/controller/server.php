@@ -2,13 +2,6 @@
 
 class Controller_Server extends Controller
 {
-    protected $server = null;
-    public function before()
-    {
-        $this->server = new \Zombmin\Server();
-
-    }
-
     public function action_actions()
 	{
 		$this->template = View::forge('server/actions');
@@ -30,9 +23,9 @@ class Controller_Server extends Controller
         $data = array();
 
         $server = new \Zombmin\Server();
-        \Zombmin\Page::setTitel($server->get('gameName'));
+        \Zombmin\Page::setTitel(\Zombmin\Server::get('gameName'));
         foreach($stats as $stat) {
-            $data[$stat] = $server->get($stat);
+            $data[$stat] = \Zombmin\Server::get($stat);
         }
         
         $this->template = View::forge('server/stats', $data);
@@ -42,9 +35,9 @@ class Controller_Server extends Controller
         $player = urldecode($_REQUEST['player']);
         $reason = $_REQUEST['reason_kick'];
 
-        $this->server->kick($player, $reason);
+        \Zombmin\Server::kick($player, $reason);
 
-        $this->redirect();
+        Response::redirect();
     }
     public function action_ban()
     {
@@ -52,26 +45,25 @@ class Controller_Server extends Controller
         $reason = $_REQUEST['reason_ban'];
         $time = $_REQUEST['time'];
 
-        $this->server->ban($player, $time, $reason);
+        \Zombmin\Server::ban($player, $time, $reason);
 
-        $this->redirect();
+        Response::redirect();
     }
     public function action_say()
     {
         $string = $_REQUEST['string'];
 
-        $this->server->say($string);
+        \Zombmin\Server::say($string);
 
-        $this->redirect();
-
+        Response::redirect();
     }
     public function action_spawnEntity()
     {
         $player = $_REQUEST['player'];
         $entity = $_REQUEST['entity'];
 
-        $this->server->spawnEntity($player, $entity);
-        $this->redirect();
+        \Zombmin\Server::spawnEntity($player, $entity);
+        Response::redirect();
 
     }
     public function after($response)

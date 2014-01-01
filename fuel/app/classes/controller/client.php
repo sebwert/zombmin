@@ -28,12 +28,12 @@ class Controller_Client extends Controller
         );
 
 
-        $server = new \Zombmin\Server();
-
-        $this->template->all_player = $server->getConnectedPlayer();
+        $this->template->all_player = \Zombmin\Server
+                                            ::getConnectedPlayer();
 
         $entity_options = array();
-        foreach ($server->getPossibleEntities() as $id => $name) {
+        foreach (\Zombmin\Server
+                        ::getPossibleEntities() as $id => $name) {
             $entity_options[] = '<option value="' . $id . '">'
                               . $name . '</option>';
 

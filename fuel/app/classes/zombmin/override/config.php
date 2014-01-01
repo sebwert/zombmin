@@ -60,5 +60,9 @@ class Config extends \Fuel\Core\Config{
     {
         return static::save(static::$userConfigFile, 'user');
     }
+    public static function getServerVersion()
+    {
+        return 'alpha5';
+    }
 }
 
