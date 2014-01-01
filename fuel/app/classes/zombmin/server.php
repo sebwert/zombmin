@@ -29,9 +29,9 @@ class Server
     {
         return static::$instance->kick($players, $reason);
     }
-    public static function spawEntity($player_id, $entity_id)
+    public static function spawnEntity($player_id, $entity_id)
     {
-        return static::$instance->spawEntity($player_id, $entity_id);
+        return static::$instance->spawnEntity($player_id, $entity_id);
     }
     public static function isConnectedID($player_id)
     {
