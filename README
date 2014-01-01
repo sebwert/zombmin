@@ -1,0 +1,31 @@
+PHP based GUI to control your 7dtd Server
+
+http://7daystodie.com/
+
+INSTALLATION:
+Install via git `git clone --recursive https://github.com/sebwert/zombmin.git zombmin` 
+to include all submodules. Tell your webserver that public directory
+inside zombmin is the webroot. Point your browser to index.php/config/index
+and setup zombmin.
+
+ATTENTION:
+If you have any 404 errors check if the right php5 web server module is
+installed.
+
+RIGHT module for apache2: libapache2-mod-php5.
+
+The WRONG module, libapache2-mod-php5filter will not work.
+
+
+
+THX to Dalibor Andzakovic for his Telnet class.
+https://github.com/ngharo/Random-PHP...lnet.class.php
+
+Uses phpgacl Copyright © 2007 Mike Benoit
+http://phpgacl.sourceforge.net/
+
+Uses Bootstrap, Copyright 2013 Twitter, Inc.
+http://getbootstrap.com
+
+Uses jQuery, Copyright 2013 The jQuery Foundation.
+https://jquery.org
