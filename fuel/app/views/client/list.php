@@ -59,7 +59,7 @@
             </div>
 
             <div class="col-md-5">
-                <form action="<?= $controller->url_for('server/kick') ?>"
+                <form action="<?= Uri::create('server/kick') ?>"
                       method="POST" role="form" class="form-inline">
                     <fieldset>
                         <legend>
@@ -78,7 +78,7 @@
                     <input type="hidden" name="player"
                                         value="<?= urlencode($player['name']) ?>">
                 </form>
-                <form action="<?= $controller->url_for('server/ban') ?>"
+                <form action="<?= Uri::create('server/ban') ?>"
                       method="POST" role="form" class="form-inline">
                     <fieldset>
                         <legend>
