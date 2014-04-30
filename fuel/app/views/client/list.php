@@ -66,7 +66,7 @@
                             <b>kick</b>
                         </legend>
                         <div class="form-group">
-                            <input id="reason_kick_<?= $player['name'] ?>"
+                            <input id="reason_kick_<?= $player['id'] ?>"
                                    class="form-control form-group"
                                    type="text" name="reason_kick" value=""
                                    placeholder="kick reason">
@@ -76,7 +76,7 @@
                         </button>
                     </fieldset>
                     <input type="hidden" name="player"
-                                        value="<?= urlencode($player['name']) ?>">
+                                        value="<?= $player['id'] ?>">
                 </form>
                 <form action="<?= Uri::create('server/ban') ?>"
                       method="POST" role="form" class="form-inline">
@@ -86,14 +86,14 @@
                         </legend>
 
                         <div class="form-group">
-                            <input id="reason_ban_<?= $player['name'] ?>"
+                            <input id="reason_ban_<?= $player['id'] ?>"
                                    class="form-control"
                                    type="text" name="reason_ban" value=""
                                    placeholder="ban reason">
                         </div>
 
                         <div class="form-group">
-                            <select id="time_ban_<?= $player['name'] ?>"
+                            <select id="time_ban_<?= $player['id'] ?>"
                                     class="form-control" name="time">
                                 <?=  implode("\n", $ban_time_options) ?> ?>
                             </select>
@@ -104,7 +104,7 @@
                         </button>
                     </fieldset>
                     <input type="hidden" name="player"
-                                        value="<?= urlencode($player['name']) ?>">
+                                        value="<?= $player['id'] ?>">
                 </form>
             </div>
         </div>

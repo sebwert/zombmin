@@ -62,7 +62,8 @@ class Config extends \Fuel\Core\Config{
     }
     public static function getServerVersion()
     {
-        return 'alpha5';
+        return 'Alpha78';
+        #return 'alpha5';
     }
 }
 

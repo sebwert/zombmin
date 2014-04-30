@@ -3,7 +3,7 @@
 class Controller_Client extends Controller
 {
 
-	public function action_list()
+    public function action_list()
 	{
 		$this->template = View::forge('client/list');
         $this->template->set('ban_time_options', array(
@@ -28,8 +28,10 @@ class Controller_Client extends Controller
         ), false);
 
 
-        $this->template->all_player = \Zombmin\Server
-                                            ::getConnectedPlayer();
+        $this->template->set('all_player',
+                              \Zombmin\Server::getConnectedPlayer(),
+                              false);
+
 
         $entity_options = array();
         foreach (\Zombmin\Server
@@ -39,7 +41,7 @@ class Controller_Client extends Controller
 
         }
         $this->template->set('entity_options', $entity_options, false);
-	}
+    }
     public function action_map($player = array())
     {
         $this->template = View::forge('client/map');
