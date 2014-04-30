@@ -46,7 +46,10 @@ class Controller_Client extends Controller
     {
         $this->template = View::forge('client/map');
 
-        $this->template->player = $player;
+        $this->template->set('player', $player, false);
+        $this->template->set('all_player',
+                              \Zombmin\Server::getConnectedPlayer(),
+                              false);
     }
 
     public function after($response)

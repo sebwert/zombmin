@@ -150,6 +150,7 @@ class Server_Alpha78
         $say_template = 'Player "%s" kicked for reason: %s';
 
         foreach($players as $single_player) {
+            $current_player_name = 'NONAME';
             foreach($connected_player as $one_player_entrie) {
                 if($one_player_entrie['id'] == $single_player) {
                     $current_player_name = $one_player_entrie['name'];
@@ -186,11 +187,20 @@ class Server_Alpha78
         }
         $this->telnet->setPrompt('');
 
+        
+        $connected_player = $this->getConnectedPlayer();
 
         $say_template = 'Player "%s" banned for %s for reason: %s';
 
         foreach($players as $single_player) {
-            $this->say(sprintf($say_template, $single_player, $time, $reason));
+            $current_player_name = 'NONAME';
+            foreach($connected_player as $one_player_entrie) {
+                if($one_player_entrie['id'] == $single_player) {
+                    $current_player_name = $one_player_entrie['name'];
+                    break;
+                }
+            }
+            $this->say(sprintf($say_template, $current_player_name, $time, $reason));
             $this->telnet->exec('ban ' . $single_player . ' '
                                        . $time);
         }

@@ -67,5 +67,18 @@
             <?= $content ?>
         </div>
         <?= \Zombmin\Page::getBottomScripts() ?>
+        <script>
+            jQuery('.map_button').click(function(){
+                jQuery('#map').modal('show');
+                var id = jQuery(this).attr('id');
+                jQuery('.map_pointer').css('z-index', 999);
+                jQuery('.map_pointer').css('color', 'red');
+
+                jQuery('#pointer_'+id+'.map_pointer').css('z-index', 1000);
+                jQuery('#pointer_'+id+'.map_pointer').css('color', 'green');
+                
+                return true;
+            });
+        </script>
     </body>
 </html>

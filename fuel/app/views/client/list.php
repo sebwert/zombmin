@@ -19,8 +19,8 @@
                 </h4>
             </div>
             <div class="col-md-2 text-danger">
-                <button data-toggle="modal" class="btn"
-                        data-target="#map_<?= $player['id'] ?>">
+                <button data-toggle="modal" class="btn map_button" 
+                        id="<?= $player['id'] ?>" data-target="#map">
                         <b>
                             <span class="glyphicon glyphicon-map-marker
                                   text-success">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <?= Request::forge('client/map')->execute(array('player' => $player)) ?>
     <? $i++; ?>
     <? endforeach; ?>
+    <?= Request::forge('client/map')->execute() ?>
 </div>
