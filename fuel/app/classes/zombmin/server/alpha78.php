@@ -23,32 +23,33 @@ class Server_Alpha78
         5 => 'zombiecrawler',
         6 => 'snowzombie01',
         7 => 'snowzombie02',
-        8 => 'spiderzombie',
-        9 => 'burntzombie',
-        10 => 'zombiegal01',
-        11 => 'zombiegal02',
-        12 => 'zombiegal03',
-        13 => 'zombiegal04',
-        14 => 'zombie02',
-        15 => 'fatzombiecop',
-        16 => 'fatzombie',
-        17 => 'hornet',
-        18 => 'zombiedog',
-        19 => 'car_Blue',
-        20 => 'car_Orange',
-        21 => 'car_Red',
-        22 => 'car_White',
-        23 => 'animalStag',
-        24 => 'animalRabbit',
-        25 => 'animalPig',
-        26 => 'sc_MeleeWeapons',
-        27 => 'sc_Food',
-        28 => 'sc_BuildingSupplies',
-        29 => 'sc_RangedWeapons',
-        30 => 'sc_RangedWeaponsDay5',
-        31 => 'sc_RangedWeaponsDay7',
-        32 => 'sc_Explosives',
-        33 => 'sc_General'
+        8 => 'snowzombie03',
+        9 => 'spiderzombie',
+        10 => 'burntzombie',
+        11 => 'zombiegal01',
+        12 => 'zombiegal02',
+        13 => 'zombiegal03',
+        14 => 'zombiegal04',
+        15 => 'zombie02',
+        16 => 'fatzombiecop',
+        17 => 'fatzombie',
+        18 => 'hornet',
+        19 => 'zombiedog',
+        20 => 'car_Blue',
+        21 => 'car_Orange',
+        22 => 'car_Red',
+        23 => 'car_White',
+        24 => 'animalStag',
+        25 => 'animalRabbit',
+        26 => 'animalPig',
+        27 => 'sc_MeleeWeapons',
+        28 => 'sc_Food',
+        29 => 'sc_BuildingSupplies',
+        30 => 'sc_RangedWeapons',
+        31 => 'sc_RangedWeaponsDay5',
+        32 => 'sc_RangedWeaponsDay7',
+        33 => 'sc_Explosives',
+        34 => 'sc_General',
     );
 
     function __construct()
@@ -58,7 +59,7 @@ class Server_Alpha78
 
         $this->telnet = new \Zombmin\Telnet($ip, $port, 20, 'Please enter password:');
         $this->telnet->setPrompt('');
-        $test = $this->telnet->exec('test123');
+        $test = $this->telnet->exec(\Config::get('user.telnet.password'));
         $this->parseStats($this->telnet->getGlobalBuffer());
     }
     /**

@@ -52,9 +52,9 @@ class Config extends \Fuel\Core\Config{
     {
         return static::getTelnetIP() && static::getTelnetPort();
     }
-    public static function loadUserConfig()
+    public static function loadUserConfig($reload = false)
     {
-        return static::load(static::$userConfigFile, 'user');
+        return static::load(static::$userConfigFile, 'user', $reload);
     }
     public static function saveUserConfig()
     {
